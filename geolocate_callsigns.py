@@ -57,8 +57,9 @@ def geolocate_callsigns(callsigns, config_file):
     
     return results
 
-# Example usage
-config_file = 'config.json'
-callsigns = ['WA3MH','K3MLH','EA4T','W4KD','K2XE','K9NN','K4RGN','WD4OOZ','EA5ST','KL5NS','K4VHE','AD9AR']
-locations = geolocate_callsigns(callsigns, config_file)
-print(locations)
+if __name__ == "__main__":
+    # Example usage
+    config_file = 'config.json'
+    callsigns = ['WA3MH','K3MLH','EA4T','W4KD','K2XE','K9NN','K4RGN','WD4OOZ','EA5ST','KL5NS','K4VHE','AD9AR']
+    locations = geolocate_callsigns(callsigns, config_file)
+    print(locations)

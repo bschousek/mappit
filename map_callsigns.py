@@ -29,13 +29,14 @@ def create_folium_map(locations, origin=None, output_file='map.html'):
     m.save(output_file)
     print(f"Map has been saved to {output_file}")
 
-# Example usage
-locations = [
+if __name__ == "__main__":
+    # Example usage
+    locations = [
     {'callsign': 'K1ABC', 'lat': 45.0, 'lon': -93.0, 'grid': 'EN34'},
     {'callsign': 'N1XYZ', 'lat': 42.0, 'lon': -88.0, 'grid': 'EN62'},
     {'callsign': 'W1ZZZ', 'lat': 40.0, 'lon': -75.0, 'grid': 'FN20'}
-]
+    ]
 
-origin = {'name': 'Saint Joseph', 'lat': 44.0, 'lon': -92.5}
+    origin = {'name': 'Saint Joseph', 'lat': 44.0, 'lon': -92.5}
 
-create_folium_map(locations, origin)
+    create_folium_map(locations, origin)
